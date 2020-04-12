@@ -12,7 +12,7 @@ class BuildTrajectory(object):
     """ Listens for points published by RViz and uses them to build a trajectory. Saves the output to the file system.
     """
     def __init__(self):
-        self.save_path = os.path.join("trajectories/", time.strftime("%Y-%m-%d-%H-%M-%S") + ".traj") #%Y-%m-%d-%H-%M-%S
+        self.save_path = os.path.join("/home/racecar/racecar_ws/src/path_planning/trajectories/", time.strftime("%Y-%m-%d-%H-%M-%S") + ".traj") #%Y-%m-%d-%H-%M-%S
         self.trajectory = LineTrajectory("/built_trajectory")
         self.data_points = []
         self.count = 0
